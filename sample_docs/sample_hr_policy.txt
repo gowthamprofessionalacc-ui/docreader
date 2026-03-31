@@ -1,0 +1,74 @@
+Grahvity AI Systems — Employee Handbook (Abridged)
+Last Updated: February 2025
+
+=== Work Schedule & Remote Policy ===
+
+Grahvity operates on a hybrid work model:
+- Core hours: 10:00 AM to 4:00 PM IST (mandatory availability)
+- Flexible hours: Employees may start as early as 8:00 AM or end as late as 8:00 PM
+- Remote work: 3 days remote, 2 days in-office per week (Tuesday and Thursday are in-office days)
+- Office location: WeWork Galaxy, Residency Road, Bangalore 560025
+
+=== Leave Policy ===
+
+Annual leave entitlement per calendar year:
+- Casual Leave: 12 days
+- Sick Leave: 8 days (medical certificate required for 3+ consecutive days)
+- Earned Leave: 15 days (accrued monthly, encashable up to 10 days at year-end)
+- Public Holidays: 12 days (as per Karnataka state calendar)
+- Maternity Leave: 26 weeks (as per Maternity Benefit Act)
+- Paternity Leave: 10 working days
+
+Leave approval process:
+1. Submit leave request via HR portal at least 3 working days in advance
+2. Manager approval required for all leaves
+3. Leaves during project deadlines require VP approval
+4. Unapproved absence for 3+ days may trigger disciplinary review
+
+=== Compensation & Benefits ===
+
+Salary structure:
+- Basic Pay: 40% of CTC
+- HRA: 20% of CTC
+- Special Allowance: 25% of CTC
+- PF Contribution: 12% of Basic (employee + employer)
+- Gratuity: As per Payment of Gratuity Act (after 5 years)
+
+Benefits:
+- Health Insurance: Group mediclaim for employee + spouse + 2 children (Sum insured: ₹5,00,000)
+- Dental: Covered under group mediclaim
+- Learning Budget: ₹50,000 per year for courses, conferences, certifications
+- Home Office Stipend: ₹15,000 one-time setup allowance for new joiners
+- Meal Allowance: ₹200/day on in-office days (via Sodexo card)
+
+=== Performance Reviews ===
+
+Review cycle: Bi-annual (April and October)
+- Self-assessment submitted by employee
+- 360-degree feedback from peers (minimum 3 reviewers)
+- Manager assessment with goal tracking
+- Calibration meeting with leadership team
+- Compensation revision effective from April cycle only
+- Promotion eligibility: Minimum 18 months in current role
+
+Rating scale:
+1 - Needs Improvement
+2 - Meets Some Expectations
+3 - Meets Expectations
+4 - Exceeds Expectations
+5 - Outstanding
+
+=== Code of Conduct ===
+
+All employees must:
+- Maintain confidentiality of client data and proprietary algorithms
+- Report any security incidents to security@grahvity.ai within 24 hours
+- Complete mandatory compliance training quarterly
+- Follow the Acceptable Use Policy for company devices and networks
+- Declare any conflicts of interest annually
+
+Zero tolerance policies:
+- Harassment or discrimination of any kind
+- Sharing trading algorithms or strategies with external parties
+- Using company resources for personal trading
+- Misrepresenting credentials or work output

@@ -1,0 +1,21 @@
+Grahvity AI Systems — Q3 2024 Financial Report
+
+Executive Summary:
+In Q3 2024, Grahvity AI Systems achieved total revenue of $4.2 million, representing a 15% year-over-year increase. This growth was primarily driven by our algorithmic trading solutions division, which saw a 22% uptick in enterprise subscriptions.
+
+Revenue Breakdown:
+- Algorithmic Trading Solutions: $2.5M (60% of total revenue)
+- IoT Sensor Analytics: $1.1M (26% of total revenue)
+- Consulting and Custom Development: $0.6M (14% of total revenue)
+
+Regional Performance:
+APAC region contributed 40% of total sales, with India accounting for 28% of the APAC number. North America contributed 35%, and Europe contributed 25%. The APAC growth was fueled by new partnerships with three major Indian broking firms.
+
+Profitability:
+EBITDA margin improved to 28%, up from 23% in Q2 2024. Operating expenses decreased by 8% due to increased automation in our deployment pipeline. Net profit margin stood at 18.5%.
+
+Risk Management:
+The risk committee approved a 5% sector exposure cap for all managed portfolios. Maximum loss per trade is set at 2% of total capital. Stop-loss triggers are configured at 1.5x ATR (Average True Range) for all NIFTY options positions. Weekly expiry position sizing follows the Kelly criterion formula with a 0.5 fraction multiplier.
+
+Outlook:
+We project Q4 revenue of $4.8M based on the current pipeline. Three new enterprise clients are in final stages of onboarding. The launch of our SensorSeal IoT attestation product is expected to contribute $200K in Q4.

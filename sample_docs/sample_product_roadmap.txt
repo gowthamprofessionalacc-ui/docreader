@@ -1,0 +1,59 @@
+Product Roadmap — Q1-Q2 2025
+Company: Grahvity AI Systems
+
+=== Q1 2025 (January - March) ===
+
+Theme: Foundation & Core Platform
+
+1. SensorSeal v2.0 Launch
+   - IoT device attestation with blockchain-anchored certificates
+   - Support for 15 new sensor manufacturers (up from 8)
+   - Expected revenue impact: $350K ARR
+   - Lead: Priya (Backend) + Ravi (DevOps)
+   - Status: On track for March 15 launch
+
+2. Ashwini Trading Agent — Phase 1
+   - Autonomous NIFTY options trading with risk guardrails
+   - Kelly criterion position sizing with 0.5 fraction cap
+   - Telegram-based alerts and trade notifications
+   - Max drawdown limit: 8% of portfolio per week
+   - Lead: Karthik (ML) + Marlion (Strategy)
+   - Status: Alpha testing with 3 internal accounts
+
+3. Data Pipeline Modernization
+   - Migrate from batch ETL to real-time streaming (Apache Kafka)
+   - Reduce data latency from 15 minutes to under 30 seconds
+   - Lead: Ravi (DevOps)
+   - Status: Kafka cluster provisioned, migration 60% complete
+
+=== Q2 2025 (April - June) ===
+
+Theme: Scale & Intelligence
+
+4. Basketball Court Vision System
+   - Real-time ball tracking using YOLOv11n + homography calibration
+   - Projector overlay for training feedback
+   - Camera: EZVIZ C6N with RTSP stream
+   - Target accuracy: 90% ball detection at 30fps
+   - Lead: Karthik (ML)
+   - Dependency: EZVIZ API rate limit resolution
+
+5. Multi-tenant Platform
+   - Isolate customer data with row-level security in PostgreSQL
+   - SSO integration via Auth0 for enterprise clients
+   - Usage-based billing with Stripe metered subscriptions
+   - Target: Support 50 concurrent enterprise tenants
+   - Lead: Priya (Backend)
+
+6. AI Knowledge Base (Internal Tool)
+   - RAG system for internal documentation search
+   - Powered by ChromaDB + GPT-4o-mini
+   - Covers: engineering docs, SOPs, compliance guidelines
+   - Lead: Full-stack hire (TBD)
+
+=== Key Metrics ===
+- Q1 Revenue Target: $5.2M
+- Q2 Revenue Target: $6.1M
+- Engineering Headcount: 8 → 11 (3 new hires in Q1)
+- Customer NPS Target: 72+
+- System Uptime Target: 99.95%
