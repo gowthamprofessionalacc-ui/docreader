@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { getChatSessions, getChatHistory, deleteChatSession } from "@/lib/api";
 import { ChatSession, SearchResult } from "@/lib/types";
 import ChatWindow from "@/components/ChatWindow";
@@ -51,11 +51,11 @@ export default function ChatPage() {
     setMessages([]);
   };
 
-  const handleSessionCreated = (id: string) => {
+  const handleSessionCreated = useCallback((id: string) => {
     setActiveSessionId(id);
     // Reload session list without resetting messages
     getChatSessions().then(setSessions).catch(() => {});
-  };
+  }, []);
 
   const handleDeleteSession = async (e: React.MouseEvent, id: string) => {
     e.stopPropagation();

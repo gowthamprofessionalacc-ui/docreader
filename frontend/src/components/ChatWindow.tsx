@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { sendChatMessage } from "@/lib/api";
 import { SearchResult } from "@/lib/types";
 import ChatMessageComponent from "./ChatMessage";
@@ -23,16 +23,18 @@ interface Props {
 export default function ChatWindow({ sessionId, initialMessages, onSessionCreated }: Props) {
   const [messages, setMessages] = useState<Message[]>(initialMessages || []);
   const [streaming, setStreaming] = useState(false);
-  const [currentSessionId, setCurrentSessionId] = useState(sessionId);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const prevSessionIdRef = useRef(sessionId);
 
+  // Use a ref for the current session ID so the streaming callback always has the latest value
+  const sessionIdRef = useRef<string | null>(sessionId);
+  const prevPropSessionId = useRef<string | null>(sessionId);
+
+  // Only reset when the parent explicitly changes the session (user clicked sidebar or New Chat)
   useEffect(() => {
-    // Only reset messages when the session actually changes (user clicked a different session or New Chat)
-    if (sessionId !== prevSessionIdRef.current) {
+    if (sessionId !== prevPropSessionId.current) {
       setMessages(initialMessages || []);
-      setCurrentSessionId(sessionId);
-      prevSessionIdRef.current = sessionId;
+      sessionIdRef.current = sessionId;
+      prevPropSessionId.current = sessionId;
     }
   }, [sessionId, initialMessages]);
 
@@ -42,7 +44,7 @@ export default function ChatWindow({ sessionId, initialMessages, onSessionCreate
     }
   }, [messages]);
 
-  const handleSend = async (message: string) => {
+  const handleSend = useCallback(async (message: string) => {
     const userMsg: Message = { role: "user", content: message };
     setMessages((prev) => [...prev, userMsg]);
     setStreaming(true);
@@ -51,7 +53,7 @@ export default function ChatWindow({ sessionId, initialMessages, onSessionCreate
     setMessages((prev) => [...prev, assistantMsg]);
 
     try {
-      const stream = await sendChatMessage(message, currentSessionId);
+      const stream = await sendChatMessage(message, sessionIdRef.current);
       const reader = stream.getReader();
       const decoder = new TextDecoder();
       let buffer = "";
@@ -92,8 +94,10 @@ export default function ChatWindow({ sessionId, initialMessages, onSessionCreate
                 return updated;
               });
             } else if (data.type === "done") {
-              if (data.session_id && !currentSessionId) {
-                setCurrentSessionId(data.session_id);
+              if (data.session_id && !sessionIdRef.current) {
+                // New session created — update ref immediately so follow-up messages use it
+                sessionIdRef.current = data.session_id;
+                prevPropSessionId.current = data.session_id;
                 onSessionCreated(data.session_id);
               }
             }
@@ -114,7 +118,7 @@ export default function ChatWindow({ sessionId, initialMessages, onSessionCreate
     } finally {
       setStreaming(false);
     }
-  };
+  }, [onSessionCreated]);
 
   return (
     <div className="flex flex-col h-full">
